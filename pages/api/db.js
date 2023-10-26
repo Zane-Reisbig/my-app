@@ -1,0 +1,55 @@
+import Dexie from 'dexie';
+
+Dexie.delete('myDatabase');
+export const db = new Dexie('myDatabase');
+
+const schema = `
+++id,
+country,
+site_number,
+pi_name,
+subject_id,
+subject_status,
+visit,
+event,
+transmittal_number,
+test_date_time,
+performed_by,
+operator_comment,
+overread_reviewer,
+overread_date_time,
+qc_specialist,
+qc_date_time,
+fev1_before_overread,
+pred_fev1_before_overread,
+fvc_before_overread,
+pred_fvc_before_overread,
+fev1_fvc_ratio_before_overread,
+red_fev1_fvc_ratio_before_overread,
+pef_before_overread,
+fef_25_75_before_overread,
+pred_fef_25_75_before_overread,
+fivc_before_overread,
+vbeex_before_overread,
+pfrt_before_overread,
+fev1_after_overread,
+pred_fev1_after_overread,
+fvc_after_overread,
+pred_fvc_after_overread,
+fev1_fvc_ratio_after_overread,
+pred_fev1_fvc_ratio_after_overread,
+pef_after_overread,
+fef_25_75_after_overread,
+pred_fef_25_75_after_overread,
+fivc_after_overread,
+vbeex_after_overread,
+pfrt_after_overread,
+fev1_overread_grade,
+fvc_overread_grade,
+overread_findings,
+overread_selection_reason,
+overread_selections, overread_comment
+`;
+db.version(1).stores({
+    s_BTRReport: schema.replace(/\n/g, ''),
+});

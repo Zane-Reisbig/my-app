@@ -1,0 +1,17 @@
+.drop_down_anchor_div {
+  display: grid;
+  grid-template-rows: repeat(1fr);
+}
+
+.save_query_button {
+  margin-top: 1em;
+  width: 30%;
+}
+
+.query_builder_preview {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.drop_down {
+  width: 30%;
+}

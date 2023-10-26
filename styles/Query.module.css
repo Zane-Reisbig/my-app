@@ -1,0 +1,19 @@
+.query_title_tag {
+  display: block;
+  
+}
+
+.query_div {
+  display: grid;
+  grid-template-columns: minmax(max-content, 20%) 1fr 1fr;
+}
+
+.remove_button {
+  background-color: lightpink;
+  border-radius: 5px;
+  width: 5em;
+}
+
+.param_selector {
+  width: 75%;
+}
